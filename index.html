@@ -2,28 +2,29 @@
 <head>
 	<title>Waiter Tip Calculator</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body ng-controller="MyController">
 
 	<h1>WaitStaff Caluculator</h1>
 	
-	<form class="formone">
+	<form class="formone" ng-submit="submit()" name="formOne">
 
 		<h2>Enter the Meal Details</h2>
 		<div>
 			<label>Base Meal Plan:</label>
-			$<input type="number">
+			$<input ng-model="mealPrice" type="number">
 		</div>
 	</br>
 		<div>
 			<label>Tax Rate:</label>
-			%<input type="number">
+			%<input ng-model="taxRate" type="number">
 		</div>
 	</br>
 		<div >
 			<label>Tip Percentage:</label>
-			%<input type="number">
+			%<input ng-model="tip" type="number">
 		</div>
 	</br>
 		<div class="button">
@@ -36,15 +37,15 @@
 
 		<h2>Customer Charger</h2>
 		<div class="label">
-			<p>Subtotal: 0.00</p>
+			<p>Subtotal: {{subtotal(mealPrice, taxRate)}}</p>
 		</div>
 
 		<div class="label">
-			<p>Tip: 0.00</p>
+			<p>Tip: {{tip(mealPrice, tip)}}</p>
 		</div>
 
 		<div class="label">
-			<p class= "total">Total: 0.00</p>
+			<p class= "total">Total: {{total(subtotal, tip)}}</p>
 		</div>
 
 	</form>
