@@ -1,0 +1,72 @@
+<html ng-app="myApp">
+<head>
+	<title>Waiter Tip Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<h1>WaitStaff Caluculator</h1>
+	
+	<form class="formone">
+
+		<h2>Enter the Meal Details</h2>
+		<div>
+			<label>Base Meal Plan:</label>
+			$<input type="number">
+		</div>
+	</br>
+		<div>
+			<label>Tax Rate:</label>
+			%<input type="number">
+		</div>
+	</br>
+		<div >
+			<label>Tip Percentage:</label>
+			%<input type="number">
+		</div>
+	</br>
+		<div class="button">
+			<input type="submit" value="Submit">
+			<input type="reset" value="Cancel">
+		</div>
+	</form>
+
+	<form class="formtwo">
+
+		<h2>Customer Charger</h2>
+		<div class="label">
+			<p>Subtotal: 0.00</p>
+		</div>
+
+		<div class="label">
+			<p>Tip: 0.00</p>
+		</div>
+
+		<div class="label">
+			<p class= "total">Total: 0.00</p>
+		</div>
+
+	</form>
+
+	<form class="formtwo">
+
+		<h2>My Earnings Info</h2>
+		<div class="label">
+			<p>Tip Total: 0.00</p>
+		</div>
+
+		<div class="label">
+			<p>Meal Count: 0</p>
+		</div>
+
+		<div class="label">
+			<p>Avg Tip/Meal: 0.00</p>
+		</div>
+
+	</form>
+
+
+<script type="text/javascript" scr="script.js"></script>
+</body>
+</html>
