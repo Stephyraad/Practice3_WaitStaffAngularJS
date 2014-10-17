@@ -1,74 +1,80 @@
 var myApp= angular.module("myApp", []);
 
 myApp.controller("MyController", function($scope){
+	$scope.mealCount=[];
+	
+
+
+	$scope.subtotal = function(a, b){
+			console.log("workoinf")
+			return a *(1+ b/100);;
+	}
+
+	$scope.tip= function(a,b){
+		return a * b/100;
+	}
+
+	$scope.total= function(a,b){
+		return a + b;
+	}
+
 
 	$scope.submit= function(){
-			$scope.subtotal = function(a, b){
-			a *(1+ b);
-			console.log("workoinf")
-			return subtotal;
-		};
+		$scope.x = $scope.subtotal($scope.mealPrice, $scope.taxRate);
+		$scope.y= $scope.tip($scope.mealPrice, $scope.tipPercent);
+		$scope.z= $scope.total($scope.x, $scope.y);
 
-			$scope.tip = function(a,b){
-			a * b/100;
-			return tip;
-			};
+		$scope.a= parseFloat($scope.totTip);
 
-			$scope.total= function (subtotal,tip){
-			return a +b;
-		};
+
+		$scope.mealCount[$scope.mealCount.length]="0";
+		$scope.b = $scope.mealCount.length;
+
 	}
+
+
+	var tipArray=[];
+	$scope.totTip=0;
+
+	tipArray.push($scope.y);
+	for( var i=0;  i<tipArray.length; i++){
+		$scope.totTip +=tipArray[i];
+		return $scope.totTip;	
+	};
+
+	//  function addTip (totTip, tipArray){
+	// 	for( var i=0;  i<tipArray.length; i++){
+	// 	$scope.totTip +=tipArray[i];
+	// 	return $scope.totTip;
+	// 	};
+	// };
+
+
+	$scope.reset= function(){
+		$scope.x=null;
+		$scope.y= null;
+		$scope.z=null;
+	}
+
+
+	$scope.resetTwo= function(){
+
+		$scope.x=null;
+		$scope.y= null;
+		$scope.z=null;
+		
+		// $scope.totTip=0;
+		// var tipArray=[];
+		// $scope.a=null;
+
+		$scope.mealCount=[];
+		$scope.b=null;
+	}
+
+
+	
+
 
 });
 
-
-
-
-
-// $scope.totTip={};
-	
-	// $scope.submit= function (a, b){
-	// 		 var subtotal = function(a, b){
-	// 		a *(1+ b);
-	// 		console.log("workoinf")
-	// 		return subtotal;
-	// 	};
-		
-	// 		$scope.tip = function(a,b){
-	// 		a * b/100;
-	// 		return tip;
-	// 		};
-
-	// 		$scope.total= function (a,b){
-	// 		return a +b;
-	// 	};
-	// }
-
-
-	
-		// function totalTip (tip){
-		// tip.push($scope.totTip);
-		// return $scope.totTip;
-
-		// };
-
-// // 	$scope.submit= 
-// 		function subtotal(a, b){
-// 			var subtotal = a *(1+ b);
-// 			console.log("workoinf")
-// 			return subtotal;
-// 			};
-// 		function tip(a,b){
-// 			var tip = a * b/100;
-// 			return tip;
-// 			};
-// 		function total (a,b){
-// 			return a +b;
-// 		};
-
-// 		function totalTip (tip){
-// 		tip.push($scope.totTip);
-// 		return $scope.totTip;
-
-// 		};
-// });
+// NG INIT 
