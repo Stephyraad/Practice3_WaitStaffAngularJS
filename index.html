@@ -2,7 +2,7 @@
 <head>
 	<title>Waiter Tip Calculator</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	
+
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller="MyController">
@@ -24,7 +24,7 @@
 	</br>
 		<div >
 			<label>Tip Percentage:</label>
-			%<input ng-model="tip" type="number">
+			%<input ng-model="tipPercent" type="number">
 		</div>
 	</br>
 		<div class="button">
@@ -41,7 +41,7 @@
 		</div>
 
 		<div class="label">
-			<p>Tip: {{tip(mealPrice, tip)}}</p>
+			<p>Tip: {{tip(mealPrice, tipPercent)}}</p>
 		</div>
 
 		<div class="label">
@@ -54,7 +54,7 @@
 
 		<h2>My Earnings Info</h2>
 		<div class="label">
-			<p>Tip Total: 0.00</p>
+			<p ng-model="totTip">Tip Total: {{ totalTip(tip) }}</p>
 		</div>
 
 		<div class="label">
@@ -68,6 +68,6 @@
 	</form>
 
 
-<script type="text/javascript" scr="script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
