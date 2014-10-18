@@ -2,6 +2,11 @@ var myApp= angular.module("myApp", []);
 
 myApp.controller("MyController", function($scope){
 	$scope.mealCount=[];
+	$scope.x=0;
+	$scope.y= 0;
+	$scope.z=0;
+	$scope.a =0;
+	$scope.b=0;
 	
 
 
@@ -25,7 +30,7 @@ myApp.controller("MyController", function($scope){
 		$scope.z= $scope.total($scope.x, $scope.y);
 
 		$scope.a= parseFloat($scope.totTip);
-
+		
 
 		$scope.mealCount[$scope.mealCount.length]="0";
 		$scope.b = $scope.mealCount.length;
@@ -37,10 +42,13 @@ myApp.controller("MyController", function($scope){
 	$scope.totTip=0;
 
 	tipArray.push($scope.y);
+	console.log("hello");
+
 	for( var i=0;  i<tipArray.length; i++){
-		$scope.totTip +=tipArray[i];
-		return $scope.totTip;	
+	$scope.totTip +=tipArray[i];
+	// return $scope.totTip;	
 	};
+
 
 	//  function addTip (totTip, tipArray){
 	// 	for( var i=0;  i<tipArray.length; i++){
@@ -51,24 +59,24 @@ myApp.controller("MyController", function($scope){
 
 
 	$scope.reset= function(){
-		$scope.x=null;
-		$scope.y= null;
-		$scope.z=null;
+		$scope.x=0;
+		$scope.y= 0;
+		$scope.z=0;
 	}
 
 
 	$scope.resetTwo= function(){
 
-		$scope.x=null;
-		$scope.y= null;
-		$scope.z=null;
+		$scope.x=0;
+		$scope.y= 0;
+		$scope.z=0;
+
+		$scope.a =0;
+		var tipArray=[];
 		
-		// $scope.totTip=0;
-		// var tipArray=[];
-		// $scope.a=null;
 
 		$scope.mealCount=[];
-		$scope.b=null;
+		$scope.b=0;
 	}
 
 
