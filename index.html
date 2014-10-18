@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="label">
-			<p class= "total">Total: {{z}}</p>
+			<p class= "total" type="number">Total: {{z}}</p>
 		</div>
 
 	</form>
@@ -61,13 +61,13 @@
 			<p ng-init="0" ng-model="mealCount" >Meal Count: {{b}}</p>
 		</div>
 
-		<!-- <div class="label">
-			<p>Avg Tip/Meal: {{a/b}}</p>
-		</div> -->
+		<div class="label">
+			<p>Avg Tip/Meal: {{c}}</p>
+		</div>
 
 	</form>
 
-	<input ng-click="resetTwo()" type="reset" value="Reset">
+	<input class="buttonTwo" ng-click="resetTwo()" type="reset" value="Reset">
 
 
 <script type="text/javascript" src="script.js"></script>

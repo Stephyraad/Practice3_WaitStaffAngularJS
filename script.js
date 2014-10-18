@@ -7,6 +7,10 @@ myApp.controller("MyController", function($scope){
 	$scope.z=0;
 	$scope.a =0;
 	$scope.b=0;
+	$scope.c=0;
+
+	var tipArray=[];
+	$scope.totTip=0;
 	
 
 
@@ -27,36 +31,24 @@ myApp.controller("MyController", function($scope){
 	$scope.submit= function(){
 		$scope.x = $scope.subtotal($scope.mealPrice, $scope.taxRate);
 		$scope.y= $scope.tip($scope.mealPrice, $scope.tipPercent);
-		$scope.z= $scope.total($scope.x, $scope.y);
+		$scope.z= $scope.total($scope.x, $scope.y)
 
+		tipArray.push($scope.y);
+	
+		for( var i=0;  i<tipArray.length; i++){
+		$scope.totTip +=tipArray[i];
+		// return $scope.totTip;	
+		};
+		
 		$scope.a= parseFloat($scope.totTip);
 		
 
 		$scope.mealCount[$scope.mealCount.length]="0";
 		$scope.b = $scope.mealCount.length;
 
+		$scope.c =($scope.a/$scope.b).toFixed(2);
+
 	}
-
-
-	var tipArray=[];
-	$scope.totTip=0;
-
-	tipArray.push($scope.y);
-	console.log("hello");
-
-	for( var i=0;  i<tipArray.length; i++){
-	$scope.totTip +=tipArray[i];
-	// return $scope.totTip;	
-	};
-
-
-	//  function addTip (totTip, tipArray){
-	// 	for( var i=0;  i<tipArray.length; i++){
-	// 	$scope.totTip +=tipArray[i];
-	// 	return $scope.totTip;
-	// 	};
-	// };
-
 
 	$scope.reset= function(){
 		$scope.x=0;
