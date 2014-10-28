@@ -10,36 +10,56 @@ h1{
 	padding-top: 30px;
 }
 
+.links{
+	with: 300px;
+	text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
 
 
+
+.newmeal{
+	width: 300px;
+	margin: auto;
+}
+
+.earnings{
+	width: 300px;
+	margin: auto;
+}
 .formone{
 	border: solid black 2px;
 	width: 280px;
-	height: 400px;
+	height: 230px;
 	padding: 20px;
 	text-align: right;
 	float: left;
 	margin-right: 30px;
 }
 
+
 .formone h2{
 	border-bottom: solid black 2px;
 	text-align: center;
+
 
 }
 
 
 .button{
-	margin-top: 100px;
+	margin-top: 30px;
 	padding-right: 62px;
 }
 .buttonTwo{
-	margin-left: 570px;
+	margin-left: 150px;
 }
 
 .formtwo{
 	border: solid black 2px;
-	width: 250px;
+	width: 280px;
 	height: 170px;
 	padding: 20px;
 	text-align: right;

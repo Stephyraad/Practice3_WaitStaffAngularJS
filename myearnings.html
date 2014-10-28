@@ -1,8 +1,10 @@
-<html>
+<html ng-app= "myApp">
 <head>
 	<title>My Earnings</title>
 </head>
 <body>
+<div class="earnings">
+
 <form class="formtwo">
 
 		<h2>My Earnings Info</h2>
@@ -18,9 +20,11 @@
 			<p>Avg Tip/Meal: {{c}}</p>
 		</div>
 
-	</form>
+</form>
 
-	<input class="buttonTwo" ng-click="resetTwo()" type="reset" value="Reset">
+<input class="buttonTwo" ng-click="resetTwo()" type="reset" value="Reset">
+</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script type="text/javascript" src="angular-route.min.js"></script>
