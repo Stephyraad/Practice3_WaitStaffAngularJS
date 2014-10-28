@@ -1,75 +1,26 @@
 <html ng-app="myApp">
 <head>
 	<title>Waiter Tip Calculator</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller="MyController">
 
 	<h1>WaitStaff Caluculator</h1>
+
+	<a  href="#">Home</a>
+	<a  href="#/new-meal">New Meal</a>
+	<a  href="#/my-earnings">My Earnings</a>
+
+	<div ng-view></div>
 	
-	<form class="formone" ng-submit="submit()" name="formOne">
+	
 
-		<h2>Enter the Meal Details</h2>
-		<div>
-			<label>Base Meal Plan:</label>
-			$<input ng-model="mealPrice" type="number">
-		</div>
-	</br>
-		<div>
-			<label>Tax Rate:</label>
-			%<input ng-model="taxRate" type="number">
-		</div>
-	</br>
-		<div >
-			<label>Tip Percentage:</label>
-			%<input ng-model="tipPercent" type="number">
-		</div>
-	</br>
-		<div class="button">
-			<input type="submit" value="Submit">
-			<input ng-click="reset()" type="reset" value="Cancel">
-		</div>
-	</form>
+	
 
-	<form class="formtwo">
-
-		<h2>Customer Charger</h2>
-		<div class="label">
-			<p>Subtotal: {{x}}</p>
-		</div>
-
-		<div class="label">
-			<p>Tip: {{y}}</p>
-		</div>
-
-		<div class="label">
-			<p class= "total" type="number">Total: {{z}}</p>
-		</div>
-
-	</form>
-
-	<form class="formtwo">
-
-		<h2>My Earnings Info</h2>
-		<div class="label">
-			<p ng-model="totTip">Tip Total: {{a}}</p>
-		</div>
-
-		<div class="label">
-			<p ng-init="0" ng-model="mealCount" >Meal Count: {{b}}</p>
-		</div>
-
-		<div class="label">
-			<p>Avg Tip/Meal: {{c}}</p>
-		</div>
-
-	</form>
-
-	<input class="buttonTwo" ng-click="resetTwo()" type="reset" value="Reset">
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script type="text/javascript" src="angular-route.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

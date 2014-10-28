@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>My Earnings</title>
+</head>
+<body>
+<form class="formtwo">
+
+		<h2>My Earnings Info</h2>
+		<div class="label">
+			<p ng-model="totTip">Tip Total: {{a}}</p>
+		</div>
+
+		<div class="label">
+			<p ng-init="0" ng-model="mealCount" >Meal Count: {{b}}</p>
+		</div>
+
+		<div class="label">
+			<p>Avg Tip/Meal: {{c}}</p>
+		</div>
+
+	</form>
+
+	<input class="buttonTwo" ng-click="resetTwo()" type="reset" value="Reset">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script type="text/javascript" src="angular-route.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</body>
+</html>

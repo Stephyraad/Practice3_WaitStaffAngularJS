@@ -1,5 +1,5 @@
 body{
-	width: 650px;
+	width: 680px;
 	/*display: block;*/
 	margin: auto;
 
@@ -7,11 +7,14 @@ body{
 
 h1{
 	text-align: center;
+	padding-top: 30px;
 }
+
+
 
 .formone{
 	border: solid black 2px;
-	width: 250px;
+	width: 280px;
 	height: 400px;
 	padding: 20px;
 	text-align: right;
