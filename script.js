@@ -14,12 +14,13 @@ myApp.config(function($routeProvider){
 	})
 	.controller("HomeCtrl", function($scope){
 		// empty for now
+        $scope.hometest = "Hello, This is the home controller";
 	})
 	.controller("MealCtrl", function($scope){
-
+        $scope.mealtest = "On the Meal Page";
 	})
 	.controller("EarningCtrl", function($scope){
-
+        $scope.earningstest = "On the earnings page";
 	});
 
 
