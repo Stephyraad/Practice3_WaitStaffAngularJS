@@ -16,11 +16,11 @@ myApp.config(function($routeProvider){
 		// empty for now
         $scope.hometest = "Hello, This is the home controller";
 	})
-	.controller("MealCtrl", function($scope){
+	.controller("MealCtrl", function($scope, $rootScope){
         // $scope.mealtest = "On the Meal Page";
 
         $scope.x=0;
-		$scope.y= 0;
+		$rootScope.y= 0;
 		$scope.z=0;
 
 		$scope.subtotal = function(a, b){
@@ -38,20 +38,20 @@ myApp.config(function($routeProvider){
 
 		$scope.submit= function(){
 			$scope.x = $scope.subtotal($scope.mealPrice, $scope.taxRate);
-			$scope.y= $scope.tip($scope.mealPrice, $scope.tipPercent);
-			$scope.z= $scope.total($scope.x, $scope.y)
+			$rootScope.y= $scope.tip($scope.mealPrice, $scope.tipPercent);
+			$scope.z= $scope.total($scope.x, $rootScope.y)
 		}
 
 		$scope.reset= function(){
 			$scope.x=0;
-			$scope.y= 0;
+			$rootScope.y= 0;
 			$scope.z=0;
 		}
 
 
 	})
 
-	.controller("EarningCtrl", function($scope){
+	.controller("EarningCtrl", function($scope, $rootScope){
         $scope.earningstest = "On the earnings page";
 
         $scope.mealCount=[];
@@ -64,7 +64,7 @@ myApp.config(function($routeProvider){
 		$scope.totTip=0;
 
 		$scope.submit= function(){
-			tipArray.push($scope.y);
+			tipArray.push($rootScope.y);
 		
 			for( var i=0;  i<tipArray.length; i++){
 			$scope.totTip +=tipArray[i];
@@ -80,7 +80,9 @@ myApp.config(function($routeProvider){
 			$scope.c =($scope.a/$scope.b).toFixed(2);
 		}
 
-		$scope.resetTwo= function(){
+		$scope.resetTwo= function($location){
+
+			$location.path('/new-meal');
 
 			$scope.mealPrice= null;
 			$scope.taxRate=null;
@@ -88,7 +90,7 @@ myApp.config(function($routeProvider){
 
 
 			$scope.x=0;
-			$scope.y= 0;
+			$rootScope.y= 0;
 			$scope.z=0;
 
 			$scope.a =0;
@@ -111,4 +113,7 @@ myApp.controller("MyController", function($scope){
 	
 });
 
+
+
+// $location.path('/new-meal');
 // NG INIT 
