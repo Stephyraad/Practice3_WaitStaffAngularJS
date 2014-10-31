@@ -50,7 +50,7 @@ myApp.config(function($routeProvider){
 
 
 	})
-	
+
 	.controller("EarningCtrl", function($scope){
         $scope.earningstest = "On the earnings page";
 
